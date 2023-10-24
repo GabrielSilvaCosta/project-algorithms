@@ -1,40 +1,45 @@
-def merge_sort(arr):
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        left_half = arr[:mid]
-        right_half = arr[mid:]
+def merge(left, right):
+    merged = []
+    left_cursor, right_cursor = 0, 0
 
-        merge_sort(left_half)
-        merge_sort(right_half)
+    while left_cursor < len(left) and right_cursor < len(right):
+        if left[left_cursor] <= right[right_cursor]:
+            merged.append(left[left_cursor])
+            left_cursor += 1
+        else:
+            merged.append(right[right_cursor])
+            right_cursor += 1
 
-        i = j = k = 0
-        merged = []
+    merged.extend(left[left_cursor:])
+    merged.extend(right[right_cursor:])
 
-        while i < len(left_half) and j < len(right_half):
-            if left_half[i] < right_half[j]:
-                merged.append(left_half[i])
-                i += 1
-            else:
-                merged.append(right_half[j])
-                j += 1
-            k += 1
+    return merged
 
-        merged.extend(left_half[i:])
-        merged.extend(right_half[j:])
 
-        arr[:] = merged
+def merge_sort(array):
+    if len(array) <= 1:
+        return array.copy()
+
+    mid = len(array) // 2
+    left = merge_sort(array[:mid])
+    right = merge_sort(array[mid:])
+
+    return merge(left, right)
+
+
+def are_lists_equal(list1, list2):
+    return all(x == y for x, y in zip(list1, list2))
 
 
 def is_anagram(first_string, second_string):
-    if not first_string or not second_string:
+    if not first_string and not second_string:
         return "", "", False
 
-    first_sorted = list(first_string.lower())
-    second_sorted = list(second_string.lower())
+    first_sorted = merge_sort(list(first_string.lower()))
+    second_sorted = merge_sort(list(second_string.lower()))
 
-    merge_sort(first_sorted)
-    merge_sort(second_sorted)
+    is_anagram = len(first_sorted) == len(second_sorted) and are_lists_equal(
+        first_sorted, second_sorted
+    )
 
-    result = first_sorted == second_sorted
-
-    return "".join(first_sorted), "".join(second_sorted), result
+    return "".join(first_sorted), "".join(second_sorted), is_anagram
