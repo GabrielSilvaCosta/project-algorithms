@@ -1,10 +1,7 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Projeto Algoritimo em Python
+
+Neste projeto Python, eu criei algumas ferramentas bem bacanas! Temos um verificador de anagramas, que diz se duas palavras são um "embaralho" uma da outra. Também temos um sistema para criptografar mensagens de maneira única, usando uma chave especial.
+
+Ah, e não poderia faltar o algoritmo Merge Sort, que é um jeito eficiente de organizar listas bagunçadas. Além disso, temos um verificador de palíndromos que usa uma abordagem recursiva interessante.
+
+O projeto também inclui uma funcionalidade que conta os períodos de tempo que incluem um alvo específico e até mesmo uma forma de encontrar duplicatas em uma lista de números.
