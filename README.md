@@ -5,3 +5,5 @@ Neste projeto Python, eu criei algumas ferramentas bem bacanas! Temos um verific
 Ah, e não poderia faltar o algoritmo Merge Sort, que é um jeito eficiente de organizar listas bagunçadas. Além disso, temos um verificador de palíndromos que usa uma abordagem recursiva interessante.
 
 O projeto também inclui uma funcionalidade que conta os períodos de tempo que incluem um alvo específico e até mesmo uma forma de encontrar duplicatas em uma lista de números.
+
+Sabe o que é legal? Tudo foi feito de forma organizada e explicativa, facilitando a compreensão. Fiz questão de deixar o código arrumadinho e bem estruturado. Dá uma olhada!
